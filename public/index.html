@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/output.css" rel="stylesheet" />
+    <title>Practice Javascript</title>
+  </head>
+  <body>
+    <div class="container my-2">
+      <h1 class="text-4xl underline font-medium text-center">
+        Daftar Mahasiswa (CRUD Sederhana)
+      </h1>
+
+      <!-- Form -->
+      <div
+        class="bg-slate-100 m-3 pl-2 h-[20rem] flex justify-center items-center flex-wrap"
+      >
+        <form action="#" class="mt-3 flex flex-wrap" id="student-form">
+          <fieldset>
+            <div class="flex flex-col gap-2">
+              <label for="jsNama">Nama Lengkap</label>
+              <input
+                type="text"
+                id="jsNama"
+                name="mhsNama"
+                class="outline-none w-[30rem] max-[470px]:w-full"
+                placeholder="Inputkan Nama"
+              />
+            </div>
+            <div class="flex flex-col gap-2 mt-1">
+              <label for="jsUmur">Umur</label>
+              <input
+                type="number"
+                id="jsUmur"
+                name="mhsNama"
+                class="outline-none"
+                placeholder="Inputkan Umur"
+              />
+            </div>
+            <div class="flex flex-col gap-2 mt-1">
+              <label>Jurusan</label>
+              <select name="jurusan" id="jsJurusan">
+                <option value="Teknik Informatika" selected>
+                  Teknik Informatika
+                </option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Desain Grafis">Desain Grafis</option>
+              </select>
+            </div>
+            <div class="mt-3 flex flex-col xl:flex-row gap-3">
+              <button
+                type="submit"
+                id="btn_submit"
+                class="bg-red-200 hover:bg-red-500 rounded-lg px-16 py-1 w-full flex justify-center items-center"
+              >
+                Submit
+              </button>
+              <button
+                type="reset"
+                class="bg-red-200 hover:bg-red-500 rounded-lg px-16 py-1 w-full flex justify-center items-center"
+              >
+                Reset
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- Tampilkan Data -->
+      <div
+        class="flex justify-center items-center flex-wrap bg-slate-100 h-auto"
+      >
+        <table class="border-separate border-spacing-1 border border-slate-400">
+          <thead>
+            <tr class="text-center">
+              <th class="border border-slate-300">Nama</th>
+              <th class="border border-slate-300">Umur</th>
+              <th class="border border-slate-300">Jurusan</th>
+              <th class="border border-slate-300">Date</th>
+              <th class="border border-slate-300">Action</th>
+            </tr>
+          </thead>
+          <tbody id="student-list">
+            <tr class="text-center">
+              <td class="border border-slate-300">Randhi</td>
+              <td class="border border-slate-300">20</td>
+              <td class="border border-slate-300">Sistem Informasi</td>
+              <td class="border border-slate-300">5-9-23</td>
+              <td
+                class="border border-slate-300 flex gap-1 max-[470px]:flex-col"
+              >
+                <button
+                  class="edit w-[5rem] bg-green-200 rounded-xl border border-slate-200 shadow-sm hover:bg-green-400"
+                >
+                  Edit
+                </button>
+                <button
+                  class="delete w-[5rem] bg-red-400 rounded-xl border border-slate-200 shadow-sm hover:bg-red-700"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
